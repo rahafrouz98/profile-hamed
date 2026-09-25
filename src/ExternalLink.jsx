@@ -1,14 +1,13 @@
 import React from "react";
-import { GitLOGO } from "./gitLOGO";
 
-export function ExternalLink({ href, children, className = "link-container", icon = "↗" }) {
+export function ExternalLink({ href, children, className = "link-container", Icon = "↗" }) {
     if (!href) return null;
     return (
         <a className={className} href={href} target="_blank" rel="noopener noreferrer">
             {children}
-            {icon == "↗" ? 
+            {Icon == "↗" ? 
             <span>↗</span> :
-            <GitLOGO className = "work-link-icon"/>}
+            <Icon className = "link-icon"/>}
         </a>
     );
 }

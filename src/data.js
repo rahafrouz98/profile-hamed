@@ -1,4 +1,5 @@
-﻿// Replace these sample titles and summaries with facts from your repositories.
+﻿import { GitLOGO } from "./GitLOGO.jsx";
+// Replace these sample titles and summaries with facts from your repositories.
 // Leave links blank until you have a real URL; blank links are not rendered.
 export const profile = {
     name: "Hamed Rahafrouz",
@@ -15,18 +16,18 @@ export const profile = {
 export const projects = [
     {
         title: "The History of Internet in Canada",
-        category: "Interactive Web / Authentication",
+        category: ["Interactive Web", "Full Stack", "Authentication"],
         type: "web site",
         tech: ["JavaScript", "API"],
         description:
             "The first of three browser-based game projects. Add the game name, its rules, and what you built here.",
         repository: "https://github.com/rahafrouz98/internet-history",
-        repIcon: "./github.svg",
+        repIcon: GitLOGO,
         demo: "https://internet-history-project.onrender.com/",
     },
     {
         title: "Game project two",
-        category: "Interactive / Web",
+        category: ["Interactive", "Web"],
         type: "game",
         tech: ["JavaScript", "React"],
         description:
@@ -36,7 +37,7 @@ export const projects = [
     },
     {
         title: "Game project three",
-        category: "Interactive / Web",
+        category: ["Interactive Web"],
         type: "game",
         tech: ["JavaScript", "React"],
         description:
@@ -46,7 +47,7 @@ export const projects = [
     },
     {
         title: "DJ application",
-        category: "Audio / Desktop",
+        category: ["Audio", "Desktop"],
         type: "audio",
         tech: ["C++"],
         description:
@@ -56,7 +57,7 @@ export const projects = [
     },
     {
         title: "Python chatbot",
-        category: "Conversation / Python",
+        category: ["Conversation", "Python"],
         type: "chat",
         tech: ["Python"],
         description:
@@ -66,7 +67,7 @@ export const projects = [
     },
     {
         title: "Full stack chatbot",
-        category: "Conversation / Full stack",
+        category: ["Conversation", "Full stack"],
         type: "fullstack",
         tech: ["Frontend", "Backend"],
         description:

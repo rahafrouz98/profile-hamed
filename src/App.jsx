@@ -1,16 +1,17 @@
 ﻿import React, { useEffect, useState, useMemo } from "react";
 import { profile, projects, filters } from "./data.js";
-import {ExternalLink} from "./ExternalLink.jsx";
-import {ProjectCard} from "./ProjectCard.jsx";
-import {ProjectFilter} from "./ProjectFilter.jsx";
+import { ExternalLink } from "./ExternalLink.jsx";
+import { ProjectCard } from "./ProjectCard.jsx";
+import { ProjectFilter } from "./ProjectFilter.jsx";
+import { GitLOGO } from "./GitLOGO.jsx";
+import { LinkedInLogo } from "./LinkedInLogo.jsx";
 
 export default function App() {
-  let [activeFilter, setFilter] = useState(filters[0]);
+    let [activeFilter, setFilter] = useState(filters[0]);
 
-  const filteredProjects = useMemo(()=>{
-    
-
-  },[ projects, activeFilter] )
+    const filteredProjects = useMemo(() => {
+        return activeFilter == "All" ? projects : projects.filter((project) => project.category.includes(activeFilter));
+    }, [projects, activeFilter]);
 
     useEffect(() => {
         document.title = profile.name + " — Developer portfolio";
@@ -59,15 +60,16 @@ export default function App() {
                     </div>
                     <div className="project-filtering">
                         <div>
-                            <ProjectFilter 
-                            setActiveFilter = {(selectedFilter) => setFilter(selectedFilter)}
-                            activeFilter = {activeFilter}/>
+                            <ProjectFilter
+                                setActiveFilter={(selectedFilter) => setFilter(selectedFilter)}
+                                activeFilter={activeFilter}
+                            />
                         </div>
-                        <span className="count">{String(projects.length).padStart(2, "0")} projects found</span>
+                        <span className="count">{String(filteredProjects.length).padStart(2, "0")} projects found</span>
                     </div>
                     <div className="project-grid">
-                        {projects.map((project) => (
-                            <ProjectCard key={project.title} project={project} />
+                        {filteredProjects.map((project, index) => (
+                            <ProjectCard key={project.title} project={project} number={index + 1} />
                         ))}
                     </div>
                 </section>
@@ -107,8 +109,12 @@ export default function App() {
                                     Say hello <span aria-hidden="true">↗</span>
                                 </a>
                             )}
-                            <ExternalLink href={profile.github}>GitHub</ExternalLink>
-                            <ExternalLink href={profile.linkedin}>LinkedIn</ExternalLink>
+                            <ExternalLink href={profile.github} Icon={GitLOGO}>
+                              GitHub
+                            </ExternalLink>
+                            <ExternalLink href={profile.linkedin} Icon={LinkedInLogo}>
+                              LinkedIn
+                            </ExternalLink>
                             {!profile.email && !profile.github && !profile.linkedin && (
                                 <span className="contact-placeholder">Contact details coming soon.</span>
                             )}
