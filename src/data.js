@@ -1,4 +1,4 @@
-﻿import { GitLOGO } from "./GitLOGO.jsx";
+﻿import { GitLogo } from "./GitLogo.jsx";
 // Replace these sample titles and summaries with facts from your repositories.
 // Leave links blank until you have a real URL; blank links are not rendered.
 export const profile = {
@@ -22,7 +22,7 @@ export const projects = [
         description:
             "The first of three browser-based game projects. Add the game name, its rules, and what you built here.",
         repository: "https://github.com/rahafrouz98/internet-history",
-        repIcon: GitLOGO,
+        repIcon: GitLogo,
         demo: "https://internet-history-project.onrender.com/",
     },
     {

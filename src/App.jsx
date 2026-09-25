@@ -3,7 +3,7 @@ import { profile, projects, filters } from "./data.js";
 import { ExternalLink } from "./ExternalLink.jsx";
 import { ProjectCard } from "./ProjectCard.jsx";
 import { ProjectFilter } from "./ProjectFilter.jsx";
-import { GitLOGO } from "./GitLOGO.jsx";
+import { GitLogo } from "./GitLogo.jsx";
 import { LinkedInLogo } from "./LinkedInLogo.jsx";
 
 export default function App() {
@@ -109,7 +109,7 @@ export default function App() {
                                     Say hello <span aria-hidden="true">↗</span>
                                 </a>
                             )}
-                            <ExternalLink href={profile.github} Icon={GitLOGO}>
+                            <ExternalLink href={profile.github} Icon={GitLogo}>
                               GitHub
                             </ExternalLink>
                             <ExternalLink href={profile.linkedin} Icon={LinkedInLogo}>
