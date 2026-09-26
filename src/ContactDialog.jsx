@@ -1,4 +1,4 @@
-import "./ContactDialog.css";
+import "./contactDialog.css";
 import React, { useState } from "react";
 import { EmailLogo } from "./EmailLogo.jsx";
 
