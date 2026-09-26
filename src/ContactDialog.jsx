@@ -1,7 +1,6 @@
 import "./ContactDialog.css";
 import React, { useState } from "react";
 import { EmailLogo } from "./EmailLogo.jsx";
-import { submitMessage } from "./submitMessage.js";
 
 export function ContactDialog({ profile }) {
     const [isOpen, setIsOpen] = useState(false);
@@ -14,11 +13,20 @@ export function ContactDialog({ profile }) {
      */
     const [sentStatus, setSentStatus] = useState("NOTSENT");
 
-    async function messageSubmitCallback(e) {
+    async function messageSubmitCallback(e.) {
         e.preventDefault();
-        setSentStatus("ISSENDING");
         try {
-            let response = await submitMessage(e.currentTarget);
+            setSentStatus("ISSENDING");
+
+            const formData = new FormData(e.currentTarget);
+            let body = {name:formData.get("name"), 
+                email:formData.get("email"), 
+                message:formData.get("message")};
+
+            let url = "https://lls7v5jw7g.execute-api.us-east-1.amazonaws.com/prod/contact";
+
+            let response = await fetch(url, {method: POST, body: JSON.stringify(body)});
+
             response.ok ? setSentStatus("SUCCEED") : setSentStatus("FAILED");
         } catch (error) {
             setSentStatus("FAILED");
