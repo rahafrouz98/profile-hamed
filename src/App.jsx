@@ -5,8 +5,9 @@ import { ProjectCard } from "./ProjectCard.jsx";
 import { ProjectFilter } from "./ProjectFilter.jsx";
 import { GitLogo } from "./GitLogo.jsx";
 import { LinkedInLogo } from "./LinkedInLogo.jsx";
+import {ContactDialog} from "./ContactDialog.jsx"
 
-export default function App() {
+export default function () {
     let [activeFilter, setFilter] = useState(filters[0]);
 
     const filteredProjects = useMemo(() => {
@@ -101,14 +102,10 @@ export default function App() {
                         <p>
                             Have a project in mind?
                             <br />
-                            I’d love to hear about it.
+                            I’d love to hear about.
                         </p>
                         <div className="contact-links">
-                            {profile.email && (
-                                <a className="button-main" href={"mailto:" + profile.email}>
-                                    Say hello <span aria-hidden="true">↗</span>
-                                </a>
-                            )}
+                            <ContactDialog profile={profile} />
                             <ExternalLink href={profile.github} Icon={GitLogo}>
                               GitHub
                             </ExternalLink>

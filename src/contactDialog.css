@@ -1,0 +1,352 @@
+/* =========================================
+   Contact Dialog
+   Primary colour: rgb(40, 40, 100)
+   ========================================= */
+
+.message-form {
+    --contact-primary: rgb(40, 40, 100);
+    --contact-primary-light: rgb(65, 65, 140);
+    --contact-background: #ffffff;
+    --contact-text: #282864;
+    --contact-muted: #666680;
+    --contact-border: #dadae8;
+    --contact-radius: 12px;
+}
+
+/* Modal background */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+    background: rgba(15, 15, 40, 0.72);
+    backdrop-filter: blur(5px);
+}
+
+/* Main dialog */
+.contact-dialog {
+    position: relative;
+
+    width: 100%;
+    max-width: 460px;
+    max-height: 90vh;
+    overflow-y: auto;
+
+    padding: 36px;
+
+    background: var(--contact-background);
+    color: var(--contact-text);
+
+    border: 1px solid var(--contact-border);
+    border-radius: var(--contact-radius);
+
+    box-shadow: 0 20px 60px rgba(10, 10, 45, 0.3);
+
+    animation: contactFadeIn 0.25s ease-out;
+}
+
+/* Dialog title */
+.contact-dialog h2 {
+    margin: 0 0 24px;
+
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--contact-primary);
+}
+
+/* Close button */
+.contact-dialog .close-button {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 32px;
+    height: 32px;
+
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+
+    background: transparent;
+    color: var(--contact-muted);
+
+    font-size: 26px;
+    line-height: 1;
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.contact-dialog .close-button:hover {
+    background: #eeeef7;
+    color: var(--contact-primary);
+}
+
+.contact-dialog .close-button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+/* Form layout */
+.contact-dialog form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    margin: 0;
+}
+
+/* Input and textarea */
+.contact-dialog input,
+.contact-dialog textarea {
+    box-sizing: border-box;
+
+    width: 100%;
+    padding: 12px 14px;
+
+    font-family: inherit;
+    font-size: 0.95rem;
+    line-height: 1.5;
+
+    color: var(--contact-text);
+    background: #f8f8fc;
+
+    border: 1px solid var(--contact-border);
+    border-radius: 8px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.contact-dialog input::placeholder,
+.contact-dialog textarea::placeholder {
+    color: #85859b;
+}
+
+/* Focus */
+.contact-dialog input:focus,
+.contact-dialog textarea:focus {
+    background: #fff;
+
+    border-color: var(--contact-primary-light);
+
+    box-shadow: 0 0 0 3px rgba(40, 40, 100, 0.12);
+}
+
+/* Textarea */
+.contact-dialog textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+/* Disabled fields */
+.contact-dialog input:disabled,
+.contact-dialog textarea:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+/* Form buttons */
+.contact-dialog button[type="submit"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    min-height: 46px;
+
+    padding: 12px 20px;
+    margin-top: 8px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: var(--contact-primary);
+    color: white;
+
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.contact-dialog button[type="submit"]:hover:not(:disabled) {
+    background: var(--contact-primary-light);
+    transform: translateY(-1px);
+
+    box-shadow: 0 4px 12px rgba(40, 40, 100, 0.2);
+}
+
+.contact-dialog button[type="submit"]:disabled {
+    opacity: 0.65;
+    cursor: wait;
+}
+
+/* Keyboard accessibility */
+.contact-dialog button:focus-visible {
+    outline: 3px solid var(--contact-primary-light);
+    outline-offset: 3px;
+}
+
+/* =========================================
+   Submission results
+   ========================================= */
+
+/* Shared result styling */
+.contact-dialog .SUCCEED-form,
+.contact-dialog .FAILED-form {
+    align-items: center;
+    text-align: center;
+    gap: 22px;
+
+    padding-top: 12px;
+}
+
+.contact-dialog .SUCCEED-form p,
+.contact-dialog .FAILED-form p {
+    margin: 0;
+
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+/* Success */
+.contact-dialog .SUCCEED-form p {
+    color: #167347;
+}
+
+.contact-dialog .SUCCEED-form::before {
+    content: "✓";
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 58px;
+    height: 58px;
+
+    background: #e5f6ed;
+    color: #16834e;
+
+    border-radius: 50%;
+
+    font-size: 30px;
+    font-weight: 600;
+}
+
+/* Failure */
+.contact-dialog .FAILED-form p {
+    color: #a32938;
+}
+
+.contact-dialog .FAILED-form::before {
+    content: "!";
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 58px;
+    height: 58px;
+
+    background: #fce8eb;
+    color: #c02e43;
+
+    border-radius: 50%;
+
+    font-size: 30px;
+    font-weight: 600;
+}
+
+/* =========================================
+   Email button icon
+   ========================================= */
+
+.button-main .link-icon {
+    width: 22px;
+    height: 22px;
+
+    flex-shrink: 0;
+    vertical-align: middle;
+}
+
+.button-main {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* =========================================
+   Animation
+   ========================================= */
+
+@keyframes contactFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* =========================================
+   Mobile
+   ========================================= */
+
+@media (max-width: 480px) {
+    .modal-overlay {
+        padding: 14px;
+    }
+
+    .contact-dialog {
+        padding: 28px 20px;
+        border-radius: 10px;
+    }
+
+    .contact-dialog h2 {
+        font-size: 1.3rem;
+    }
+
+    .contact-dialog input,
+    .contact-dialog textarea {
+        font-size: 16px;
+    }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .contact-dialog {
+        animation: none;
+    }
+
+    .contact-dialog *,
+    .contact-dialog *::before,
+    .contact-dialog *::after {
+        transition: none;
+    }
+}

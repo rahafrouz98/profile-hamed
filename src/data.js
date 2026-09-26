@@ -8,7 +8,7 @@ export const profile = {
     headline: "Building applications.\nTurning data into insights.",
     intro: "I help clients build websites, interactive applications, and chatbots with JavaScript, React, C++, and Python, and turn complex data into clear, actionable insights.",
     about: "My background combines software development, data analysis, and reliability engineering, with experience working with IBM Maximo. I can help you build a custom application, or make enterprise data easier to understand and use. My projects include browser-based games, a desktop DJ application, chatbots, and data analysis",
-    email: "h.rahafrouz@gmail.com",
+    email: "hamed@afrouztech.tech",
     github: "https://github.com/rahafrouz98",
     linkedin: "https://www.linkedin.com/in/h-rahafrouz/",
 };
