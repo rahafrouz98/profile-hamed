@@ -23,10 +23,17 @@ export function ContactDialog({ profile }) {
 
             let url = "https://lls7v5jw7g.execute-api.us-east-1.amazonaws.com/prod/contact";
 
-            let response = await fetch(url, { method: POST, body: JSON.stringify(body) });
+            let response = await fetch(url, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(body),
+            });
 
             response.ok ? setSentStatus("SUCCEED") : setSentStatus("FAILED");
         } catch (error) {
+            console.log(error);
             setSentStatus("FAILED");
         }
     }
@@ -74,7 +81,7 @@ export function ContactDialog({ profile }) {
                             <form onSubmit={resultFormCallback} className={`${sentStatus}-form`}>
                                 <p>
                                     {sentStatus == "SUCCEED"
-                                        ? `Thank you for your message! We've sent a confirmation email to your inbox.
+                                        ? `Thank you for your message!\n We've sent a confirmation email to your inbox.
                                                 Please click the verification link to complete your submission.`
                                         : `Sorry, we couldn't process your message.
                                                     Please check your email address and try again.`}
