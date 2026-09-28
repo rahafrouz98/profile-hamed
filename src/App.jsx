@@ -84,9 +84,9 @@ export default function () {
                     </div>
                     <div className="about-copy">
                         <p>{profile.about}</p>
-                        <h3>Tools I work with</h3>
+                        <h3>Tools I work with:</h3>
                         <ul className="skills">
-                            {["JavaScript", "React", "C++", "Python", "HTML & CSS"].map((skill) => (
+                            {["AWS", "JavaScript", "TypeScript", "React", "Next.js", "Express.js", "C++", "Python", "HTML & CSS", "SQL"].map((skill) => (
                                 <li key={skill}>{skill}</li>
                             ))}
                         </ul>
@@ -102,7 +102,7 @@ export default function () {
                         <p>
                             Have a project in mind?
                             <br />
-                            I’d love to hear about.
+                            I’d love to hear about it.
                         </p>
                         <div className="contact-links">
                             <ContactDialog profile={profile} />
@@ -123,7 +123,7 @@ export default function () {
                 <span>
                     © {new Date().getFullYear()} {profile.name}
                 </span>
-                <span>Built with React. Made with curiosity.</span>
+                <span>Built with React/ AWS. Made with curiosity.</span>
                 <a href="#home">Back to top ↑</a>
             </footer>
         </>

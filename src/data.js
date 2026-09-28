@@ -10,15 +10,15 @@ export const profile = {
     about: "My background combines software development, data analysis, and reliability engineering, with experience working with IBM Maximo. I can help you build a custom application, or make enterprise data easier to understand and use. My projects include browser-based games, a desktop DJ application, chatbots, and data analysis",
     email: "hamed@afrouztech.tech",
     github: "https://github.com/rahafrouz98",
-    linkedin: "https://www.linkedin.com/in/h-rahafrouz/",
+    linkedin: "https://internet-history-lfc4.onrender.com/",
 };
 
 export const projects = [
     {
         title: "The History of Internet in Canada",
-        category: ["Interactive Web", "Full Stack", "Authentication"],
+        category: ["Interactive Web", "Full Stack", "Authentication", "API"],
         type: "web site",
-        tech: ["JavaScript", "API"],
+        tech: ["JavaScript", "Express.js"],
         description:
             "The first of three browser-based game projects. Add the game name, its rules, and what you built here.",
         repository: "https://github.com/rahafrouz98/internet-history",
