@@ -16,11 +16,11 @@ export const profile = {
 export const projects = [
     {
         title: "The History of Internet in Canada",
-        category: ["Interactive Web", "Full Stack", "Authentication", "API"],
+        category: ["Interactive Web", "Full Stack", "Authentication", "API", "PostgreSQL"],
         type: "web site",
-        tech: ["JavaScript", "Express.js"],
+        tech: ["JavaScript", "Express.js", "SQL"],
         description:
-            "The first of three browser-based game projects. Add the game name, its rules, and what you built here.",
+            "A website exploring the history of the Internet in Canada, built with Express.js and Supabase for authentication and PostgreSQL data storage. Users can sign up, log in, and contribute content for review.",
         repository: "https://github.com/rahafrouz98/internet-history",
         repIcon: GitLogo,
         demo: "https://internet-history-project.onrender.com/",
