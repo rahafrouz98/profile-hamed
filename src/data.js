@@ -10,7 +10,7 @@ export const profile = {
     about: "My background combines software development, data analysis, and reliability engineering, with experience working with IBM Maximo. I can help you build a custom application, or make enterprise data easier to understand and use. My projects include browser-based games, a desktop DJ application, chatbots, and data analysis",
     email: "hamed@afrouztech.tech",
     github: "https://github.com/rahafrouz98",
-    linkedin: "https://internet-history-lfc4.onrender.com/",
+    linkedin: "www.linkedin.com/in/h-rahafrouz",
 };
 
 export const projects = [
@@ -23,37 +23,37 @@ export const projects = [
             "A website exploring the history of the Internet in Canada, built with Express.js and Supabase for authentication and PostgreSQL data storage. Users can sign up, log in, and contribute content for review.",
         repository: "https://github.com/rahafrouz98/internet-history",
         repIcon: GitLogo,
-        demo: "https://internet-history-project.onrender.com/",
+        demo: "https://internet-history-lfc4.onrender.com/",
     },
     {
-        title: "Game project two",
-        category: ["Interactive", "Web"],
+        title: "Robot in jungle",
+        category: ["Interactive Web", "Game"],
         type: "game",
-        tech: ["JavaScript", "React"],
+        tech: ["JavaScript"],
         description:
-            "A second experiment in interactive play. Describe the main interaction and the development challenge you solved.",
-        repository: "",
-        demo: "",
+            "A browser-based 2D side-scrolling platformer built with JavaScript, featuring procedural level generation, collision detection, dynamic camera scrolling, animated enemies, and collectible-based progression.",
+        repository: "https://github.com/rahafrouz98/robot-in-jungle",
+        demo: "https://robot-in-jungle.onrender.com/",
     },
     {
-        title: "Game project three",
-        category: ["Interactive Web"],
-        type: "game",
-        tech: ["JavaScript", "React"],
+        title: "OtoDecks",
+        category: ["OPP", "DSP"],
+        type: "Adio App",
+        tech: ["c++", "juce"],
         description:
-            "The third game in the collection. Replace this text with the actual gameplay and your contribution.",
-        repository: "",
-        demo: "",
+            "A DJ application built with C++ and the JUCE framework, featuring FFT-based signal processing, BPM estimation, a loop sampling panel, cue controls, and playlist management.",
+        repository: "https://github.com/rahafrouz98/OtoDecks-new",
+        demo: "https://youtu.be/1SRcnPIJ6MI",
     },
     {
-        title: "DJ application",
-        category: ["Audio", "Desktop"],
-        type: "audio",
-        tech: ["C++"],
+        title: "Music Visualizer",
+        category: ["OOP", "DSP"],
+        type: "Audio App",
+        tech: ["JavaScript"],
         description:
-            "A DJ application built with C++. Add the audio features you implemented and the libraries you used.",
-        repository: "",
-        demo: "",
+            "An audio-reactive music visualizer built with JavaScript, transforming energy across frequency bands into dynamic 2D and 3D animations, including waveforms, noise-driven ripples, fireworks, dial gauges, a sphere, and flames. Controlers are provided on the right and left side of the window.",
+        repository: "git@github.com:rahafrouz98/vidualizer.git",
+        demo: "https://vidualizer.onrender.com/",
     },
     {
         title: "Python chatbot",
@@ -62,7 +62,7 @@ export const projects = [
         tech: ["Python"],
         description:
             "A conversational project built with Python. Explain how responses are generated and what the bot helps users do.",
-        repository: "",
+        repository: "https://github.com/rahafrouz98/chatbot1",
         demo: "",
     },
     {
@@ -88,4 +88,6 @@ export const filters = [
     "FFT",
     "Audio Analysis",
     "Data Analysis",
+    "DSP",
+    "OOP",
 ];

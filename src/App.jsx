@@ -5,7 +5,7 @@ import { ProjectCard } from "./ProjectCard.jsx";
 import { ProjectFilter } from "./ProjectFilter.jsx";
 import { GitLogo } from "./GitLogo.jsx";
 import { LinkedInLogo } from "./LinkedInLogo.jsx";
-import {ContactDialog} from "./ContactDialog.jsx"
+import { ContactDialog } from "./ContactDialog.jsx";
 
 export default function () {
     let [activeFilter, setFilter] = useState(filters[0]);
@@ -86,7 +86,19 @@ export default function () {
                         <p>{profile.about}</p>
                         <h3>Tools I work with:</h3>
                         <ul className="skills">
-                            {["AWS", "JavaScript", "TypeScript", "React", "Next.js", "Express.js", "C++", "Python", "HTML & CSS", "SQL"].map((skill) => (
+                            {[
+                                "AWS",
+                                "JavaScript",
+                                "TypeScript",
+                                "React",
+                                "Next.js",
+                                "Express.js",
+                                "C++",
+                                "juce",
+                                "Python",
+                                "HTML & CSS",
+                                "SQL",
+                            ].map((skill) => (
                                 <li key={skill}>{skill}</li>
                             ))}
                         </ul>
@@ -107,10 +119,10 @@ export default function () {
                         <div className="contact-links">
                             <ContactDialog profile={profile} />
                             <ExternalLink href={profile.github} Icon={GitLogo}>
-                              GitHub
+                                GitHub
                             </ExternalLink>
                             <ExternalLink href={profile.linkedin} Icon={LinkedInLogo}>
-                              LinkedIn
+                                LinkedIn
                             </ExternalLink>
                             {!profile.email && !profile.github && !profile.linkedin && (
                                 <span className="contact-placeholder">Contact details coming soon.</span>
