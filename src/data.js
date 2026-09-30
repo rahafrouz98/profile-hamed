@@ -16,9 +16,9 @@ export const profile = {
 export const projects = [
     {
         title: "The History of Internet in Canada",
-        category: ["Interactive Web", "Full Stack", "Authentication", "API", "PostgreSQL"],
+        category: ["Interactive Web", "Full Stack", "Authentication", "API"],
         type: "web site",
-        tech: ["JavaScript", "Express.js", "SQL"],
+        tech: ["JavaScript", "HTML", "CSS", "Express.js", "SQL"],
         description:
             "A website exploring the history of the Internet in Canada, built with Express.js and Supabase for authentication and PostgreSQL data storage. Users can sign up, log in, and contribute content for review.",
         repository: "https://github.com/rahafrouz98/internet-history",
@@ -47,7 +47,7 @@ export const projects = [
     },
     {
         title: "Music Visualizer",
-        category: ["OOP", "DSP"],
+        category: ["Interactive Web", "OOP", "DSP"],
         type: "Audio App",
         tech: ["JavaScript"],
         description:
@@ -57,23 +57,38 @@ export const projects = [
     },
     {
         title: "Python chatbot",
-        category: ["Conversation", "Python"],
+        category: ["NLP", "Python"],
         type: "chat",
         tech: ["Python"],
-        description:
-            "A conversational project built with Python. Explain how responses are generated and what the bot helps users do.",
+        description: `Developed a conversational chatbot using Python and NLTK, applying tokenization, part-of-speech tagging, and lemmatization to match user input with predefined intents. Used regular expressions, session memory, and response templates to personalize replies, with randomized responses and fallback messages.`,
         repository: "https://github.com/rahafrouz98/chatbot1",
         demo: "",
     },
     {
-        title: "Full stack chatbot",
-        category: ["Conversation", "Full stack"],
+        title: "W2Watch",
+        category: ["RAG", "LLM", "Full Stack"],
         type: "fullstack",
-        tech: ["Frontend", "Backend"],
-        description:
-            "A chatbot with a connected frontend and backend. Add your actual stack, architecture, and supported features.",
-        repository: "",
-        demo: "",
+        tech: ["JavaScript", "Express.js", "HTML", "CSS", "vite", "API", "SQL"],
+        description: `Built a full-stack app that recommends movies based on individual or group preferences, mood, and available time. Combined OpenAI embeddings, Supabase vector search, and generative AI to deliver personalized suggestions with summaries and TMDB posters.`,
+        repository: "https://github.com/rahafrouz98/w2watch",
+        demo: "https://w2watch-3.onrender.com",
+    },
+    {
+        title: "Library",
+        category: ["Interactive Web"],
+        type: "fullstack",
+        tech: ["TypeScript", "Next.js", "React"],
+        description: `Library is a book browsing website built with Next.js, React, TypeScript, and Tailwind CSS. It features a responsive catalogue, category filtering, and individual book pages with author information and interactive like buttons.`,
+        repository: "https://github.com/rahafrouz98/tiny-library",
+        demo: "https://tiny-library.onrender.com/books",
+    },
+    {
+        title: "Applied-Data-Science-Capstone",
+        category: ["Data Analysis"],
+        type: "Data Analysis",
+        tech: ["Data Analysis"],
+        description: `A SpaceX launch analysis project exploring how payload mass, orbit, and launch location relate to Falcon 9 first-stage landing success. Uses Python, SQL, interactive maps, and a Plotly Dash dashboard to explore historical launch data, alongside machine learning models for predicting landing outcomes. Developed as part of the IBM Applied Data Science Capstone.`,
+        repository: "https://github.com/rahafrouz98/tiny-library",
     },
 ];
 
@@ -84,10 +99,9 @@ export const filters = [
     "LLM",
     "RAG",
     "Authentication",
-    "Game",
-    "FFT",
-    "Audio Analysis",
     "Data Analysis",
     "DSP",
     "OOP",
+    "NLP",
+    "API",
 ];
