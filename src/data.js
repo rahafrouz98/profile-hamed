@@ -37,7 +37,7 @@ export const projects = [
     },
     {
         title: "OtoDecks",
-        category: ["OPP", "DSP"],
+        category: ["OOP", "DSP"],
         type: "Adio App",
         tech: ["c++", "juce"],
         description:
@@ -66,7 +66,7 @@ export const projects = [
     },
     {
         title: "W2Watch",
-        category: ["RAG", "LLM", "Full Stack"],
+        category: ["RAG", "LLM", "Full Stack", "API"],
         type: "web site",
         tech: ["JavaScript", "Express.js", "HTML", "CSS", "vite", "API", "SQL"],
         description: `Built a full-stack app that recommends movies based on individual or group preferences, mood, and available time. Combined OpenAI embeddings, Supabase vector search, and generative AI to deliver personalized suggestions with summaries and TMDB posters.`,
