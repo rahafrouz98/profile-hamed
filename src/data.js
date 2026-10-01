@@ -91,14 +91,24 @@ export const projects = [
         repository: "https://github.com/rahafrouz98/tiny-library",
         demo: "https://applied-data-science-capstone-djdc.onrender.com/",
     },
-        {
+    {
         title: "Restaurant",
         category: ["Interactive Web"],
         type: "web site",
         tech: ["JavaScript", "HTML", "CSS"],
-        description: `A restaurant ordering app built with HTML, CSS, and vanilla JavaScript. Users can browse the menu, add or remove items, adjust quantities, and view automatically calculated order totals. The app includes a simulated checkout form and order confirmation, demonstrating DOM manipulation, event handling, and cart state management. Developed using Vite."
+        description: `A restaurant ordering app built with HTML, CSS, and vanilla JavaScript. Users can browse the menu, add or remove items, adjust quantities, and view automatically calculated order totals. The app includes a simulated checkout form and order confirmation, demonstrating DOM manipulation, event handling, and cart state management. Developed using Vite.`,
+        repository: "https://github.com/rahafrouz98/resturant",
         demo: "https://applied-data-science-capstone-djdc.onrender.com/",
-    }
+    },
+    {
+        title: "Dodgem",
+        category: ["Interactive Web"],
+        type: "web site",
+        tech: ["JavaScript"],
+        description: `Dodgem is an interactive bumper car simulation built with JavaScript, p5.js, and Matter.js. It features physics-based collisions, autonomous opponents, and dynamic damage effects, showcasing object-oriented programming and particle animation.`,
+        repository: "https://github.com/rahafrouz98/dodgem",
+        demo: "https://dodgem.onrender.com/",
+    },
 ];
 
 export const filters = [
