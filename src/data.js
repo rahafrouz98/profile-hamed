@@ -67,7 +67,7 @@ export const projects = [
     {
         title: "W2Watch",
         category: ["RAG", "LLM", "Full Stack"],
-        type: "fullstack",
+        type: "web site",
         tech: ["JavaScript", "Express.js", "HTML", "CSS", "vite", "API", "SQL"],
         description: `Built a full-stack app that recommends movies based on individual or group preferences, mood, and available time. Combined OpenAI embeddings, Supabase vector search, and generative AI to deliver personalized suggestions with summaries and TMDB posters.`,
         repository: "https://github.com/rahafrouz98/w2watch",
@@ -89,7 +89,16 @@ export const projects = [
         tech: ["Data Analysis"],
         description: `A SpaceX launch analysis project exploring how payload mass, orbit, and launch location relate to Falcon 9 first-stage landing success. Uses Python, SQL, interactive maps, and a Plotly Dash dashboard to explore historical launch data, alongside machine learning models for predicting landing outcomes. Developed as part of the IBM Applied Data Science Capstone.`,
         repository: "https://github.com/rahafrouz98/tiny-library",
+        demo: "https://applied-data-science-capstone-djdc.onrender.com/",
     },
+        {
+        title: "Restaurant",
+        category: ["Interactive Web"],
+        type: "web site",
+        tech: ["JavaScript", "HTML", "CSS"],
+        description: `A restaurant ordering app built with HTML, CSS, and vanilla JavaScript. Users can browse the menu, add or remove items, adjust quantities, and view automatically calculated order totals. The app includes a simulated checkout form and order confirmation, demonstrating DOM manipulation, event handling, and cart state management. Developed using Vite."
+        demo: "https://applied-data-science-capstone-djdc.onrender.com/",
+    }
 ];
 
 export const filters = [
